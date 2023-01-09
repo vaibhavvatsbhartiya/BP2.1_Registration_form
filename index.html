@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <div class="form-container">
+            <form action="">
+                <div class="input-name">
+                    <!-- FNLN is a class used here for first and last name  -->
+                    <span class="fssname">
+                    <i class="fa fa-user FNLN" aria-hidden="true"></i>
+                    <input type="text" placeholder="First Name" class="name">
+                    </span>
+                    <span class="Lsrname">
+                    <i class="fa fa-user FNLN" aria-hidden="true"></i>
+                    <input type="text" placeholder="Last Name" class="name">
+                    </span>
+                </div>
+
+                <div class="input-name ">
+                    <i class="fa fa-envelope email" aria-hidden="true"></i>
+                    <input type="text" placeholder="Email" class="text-name">
+                </div>
+
+                <div class="input-name">
+                    <i class="fa fa-lock lock" aria-hidden="true"></i>
+                    <input type="text" placeholder="Password" class="text-name">
+                </div>
+
+                <div class="input-name">
+                    <i class="fa fa-lock lock" aria-hidden="true"></i>
+                    <input type="text" placeholder="Confirm Password" class="text-name">
+                </div>
+
+                <div class="input-name">
+                    <input type="radio" class="radio-button" name="gender">
+                    <label class="gndr" style="margin-right: 30px;">Male</label>
+
+                    <input type="radio" class="radio-button" name="gender">
+                    <label class="gndr">Female</label>
+                </div>
+
+                <div class="input-name">
+                    <select name="" id="" class="country">
+                        <option value="">Select a countary</option>
+                        <option value="">Bharat</option>
+                        <option value="">Nepal</option>
+                        <option value="">Shri Lanka</option>
+                        <option value="">Russia</option>
+                        <option value="">Israel</option>
+                        <option value="">US</option>
+                        <option value="">France</option>
+                        <option value="">Japan</option>
+                    </select>
+                    <div class="arrow"></div>
+                </div>
+
+                <div class="input-name">
+                    <input type="checkbox" id="chkbtn" class="check-button">
+                    <label for="chkbtn" class="check">I accept all terms and conditions</label>
+                </div>
+
+                <div class="input-name">
+                    <input type="submit" onsubmit="alert()" class="sub-button" value="Register">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script>
+     
+        alert(
+        "Your response has been submitted"
+    )
+    </script>
+</body>
+</html>

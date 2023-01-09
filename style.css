@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f2f2f2;
+    font-size: 1.6rem;
+}
+
+.container{
+    width: 500px;
+    padding: 25px;
+    background: white;
+    margin: 7rem auto 0;
+    border-top: 5px solid blue;
+    box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container h2 {
+    text-align: center;
+    padding: 20px ;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.input-name{
+    width: 90%;
+    margin: 20px auto;
+}
+/* First And last name icon */
+.FNLN{
+    padding: 8px 11px;
+}
+
+.name{
+    width: 44%;
+    padding: 8px 0 8px 40px;
+}
+
+.input-name span .Lsrname{
+    margin-left: 35px;
+}
+
+.text-name{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+
+.input-name i {
+    position: absolute;
+    font-size: 18px;
+    color: blue;
+    border-right: 1px solid #cccccc;
+}
+
+.email{
+    padding: 8px;
+}
+
+.lock{
+    padding: 8px;
+}
+
+.text-name, .name{
+    border: 1px solid #cccccc;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+
+
+/* hover work */
+.text-name:hover, .name:hover{
+    background: #eeebeb;
+}
+
+.text-name:focus, .name:focus{
+    border: 1px solid blue;
+}
+
+/* Radio Button */
+.radio-button{
+    margin-right: 5px;
+    accent-color: blue;
+}
+
+
+.gndr{
+    font-size: 19px;
+}
+
+
+/* selecting a countary */
+.country{
+    display: inline;
+    width: 100%;
+    height: 35px;
+    padding: 0px 15px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    color: #7b7b7b;
+    border-radius: 0;
+    background: white;
+    /* appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; */
+    transition: all 0.3s ease;
+}
+
+.country::-ms-expand{
+    display: none;
+}
+
+.country:hover, .country:focus{
+    color: black;
+    background: #fafafa;
+    border-color: blue;
+    outline: none;
+}
+
+/* For our custon made arrow 
+but it is not completely responsive */
+/* .arrow{
+    position: absolute;
+    top: calc(69% - 6px);
+    right: 38%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: #7b7b7b transparent transparent transparent;
+} */
+
+.country:hover + /*.arrow*/, .country:focus + /*.arrow*/{
+    border-top-color: blue;
+}
+
+
+
+/* For check Button */
+.check{
+    position: relative;
+    margin-right: 20px;
+    font-size: 17px;
+}
+
+.check::before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    vertical-align: -2px;
+    border: 2px solid #cccccc;
+    padding: 2.5px;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+
+.check::after{
+     border-right: 2px solid black;
+     border-top: 2px solid black;
+     content: "";
+     height: 20px;
+     left: 2px;
+     position: absolute;
+     top: 7px;
+     transform: scaleX(-1) rotate(135deg);
+     transform-origin: left top;
+     width: 7px;
+     display: none;
+}
+
+.check-button{
+    border-width: 2px;
+    /* clip: rect(0 0 0 0); */
+    height: 2px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 2px;
+}
+/* .check-button:selected{
+    display: none;
+} */
+.check-button:hover +.check::before{
+    border-color: blue;
+}
+
+.check-button:checked +.check::before{
+    border-color: green;
+}
+
+.check-button:checked +.check::after{
+    -moz-animation: check 0.8s ease 0s running;
+    -webkit-animation: check 0.8s ease 0s running;
+    animation: check 0.8s ease 0s running;
+    -ms-animation: check 0.8s ease 0s running;
+    display: block;
+    width: 7px;
+    height: 20px;
+    border-color: green;
+}
+
+/* Now creating animation named as check */
+@-webkit-keyframes check{
+    0%{height: 0;
+    width: 0;}
+    25%{height: 0;
+    width: 7px;}
+    50%{height: 20px;
+    width: 7px;}
+}
+
+.sub-button{
+    background-color: blue;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.sub-button:hover{
+    background: green;
+}
+
+/* for responsive design */
+@media(max-width:768px){
+    .container{
+        width: 300px;
+    }
+    .input-name .fssname{
+        display: block;
+        /* width: 100%; */
+    }
+    .name{
+        width: 100%;
+        /* padding: 8px 0 8px 40px; */
+        margin-top: 20px;
+    }
+    .FNLN{
+        margin-top: 20px;
+    }
+    .check{
+        font-size: 50%;
+    }
+    .email{
+        margin-top: 1px;
+    }
+    .lock{
+        margin-top: 1px;
+    }
+}
